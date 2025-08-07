@@ -2,14 +2,16 @@ export default function Main() {
   return (
     <main>
       <form>
-        <label>
-          Top Text
-          <input type="text" name="top"></input>
-        </label>
-        <label>
-          Bottom Text
-          <input type="text" name="top"></input>
-        </label>
+        <div className="form-row">
+          <label>
+            Top Text
+            <input type="text" name="top"></input>
+          </label>
+          <label>
+            Bottom Text
+            <input type="text" name="top"></input>
+          </label>
+        </div>
         <button type="submit">Generate</button>
       </form>
 

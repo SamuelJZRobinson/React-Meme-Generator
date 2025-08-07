@@ -88,11 +88,44 @@ header img.logo {
 
 header p.logo {
   font-size: 1.4rem;
+  color: white;
 }
 
 main {
   height: 100vh;
   padding: 2rem 20%;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-weight: bold;
+}
+
+form .form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  background-color: rgba(156, 31, 187, 0.15);
+  border: 2px solid rgba(0, 0, 0, 15%);
+}
+
+form button {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  margin-bottom: 1.5rem;
+  background-color: rgb(156, 31, 187);
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+form button:hover {
+  background-color: hsl(288, 72%, 33%);
 }
 
 #imageContainer {
@@ -108,22 +141,35 @@ main {
   object-fit: cover;
 }
 
+p.top,
+p.bottom {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  color: white;
+}
+
 .top {
+  width: 100%;
   position: absolute;
+  text-align: center;
   top: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0px;
 }
 
 .bottom {
+  width: 100%;
   position: absolute;
+  text-align: center;
   bottom: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0px;
 }
 
 footer {
   padding: 2rem 20%;
   background-color: rgb(156, 31, 187);
   text-align: center;
+  color: white;
 }
