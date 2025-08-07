@@ -130,15 +130,15 @@ form button:hover {
 
 #imageContainer {
   position: relative;
-  height: 300px;
-  width: 500px;
+  height: auto;
+  width: 400px;
   background-color: red;
 }
 
 #imageContainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 p.top,

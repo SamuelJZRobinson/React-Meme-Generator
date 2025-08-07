@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Main() {
   const [meme, setMeme] = useState({
@@ -6,6 +6,8 @@ export default function Main() {
     bottomText: "I'm the cool bottom text",
     imageURL: "./src/assets/meme.webp",
   });
+
+  const [allMemes, setAllMemes] = useState([]);
 
   function handleChange(event) {
     const { value, name } = event.currentTarget;
@@ -15,9 +17,26 @@ export default function Main() {
     }));
   }
 
+  function handleRandomMeme() {
+    let randomIndex = Math.floor(Math.random() * allMemes.length);
+    let newURL = allMemes[randomIndex].url;
+    setMeme((prevmeme) => ({
+      ...prevmeme,
+      imageURL: newURL,
+    }));
+  }
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((response) => response.json())
+      .then((data) => {
+        setAllMemes(data.data.memes);
+      });
+  }, []);
+
   return (
     <main>
-      <form>
+      <form action={handleRandomMeme}>
         <div className="form-row">
           <label>
             Top Text
