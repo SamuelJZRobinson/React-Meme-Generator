@@ -130,6 +130,8 @@ form button:hover {
 
 #imageContainer {
   position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
   height: auto;
   width: 400px;
   background-color: red;
